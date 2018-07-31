@@ -23,6 +23,7 @@ func NewNodeCommand(storageosCli *command.StorageOSCli) *cobra.Command {
 		newUncordonCommand(storageosCli),
 		newDrainCommand(storageosCli),
 		newUndrainCommand(storageosCli),
+		newLeaveCommand(storageosCli),
 		command.WithAlias(newUpdateCommand(storageosCli), command.UpdateAliases...),
 	)
 	return cmd
